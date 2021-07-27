@@ -1,0 +1,22 @@
+.numericContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numericContainer > h4 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.numericContainer > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gray);
+  margin: 16px 0 0 0;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+}
