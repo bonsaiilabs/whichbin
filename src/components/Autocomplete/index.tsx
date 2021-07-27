@@ -30,7 +30,7 @@ export function Autocomplete(
 ) {
   const [autocompleteState, setAutocompleteState] = React.useState<
     AutocompleteState<AutocompleteItem>
-    >({
+  >({
     collections: [],
     completion: null,
     context: {},
@@ -46,7 +46,7 @@ export function Autocomplete(
         React.BaseSyntheticEvent,
         React.MouseEvent,
         React.KeyboardEvent
-        >({
+      >({
         onStateChange({ state }) {
           setAutocompleteState(state);
         },
@@ -106,28 +106,28 @@ export function Autocomplete(
   }, [getEnvironmentProps, formRef, inputRef, panelRef]);
 
   return (
-    <div className="aa-Autocomplete" {...autocomplete.getRootProps({})}>
+    <div className='aa-Autocomplete' {...autocomplete.getRootProps({})}>
       <form
         ref={formRef}
-        className="aa-Form"
+        className='aa-Form'
         {...autocomplete.getFormProps({ inputElement: inputRef.current })}
       >
-        <div className="aa-InputWrapperPrefix">
-          <label className="aa-Label" {...autocomplete.getLabelProps({})}>
-            <button className="aa-SubmitButton" type="submit" title="Submit">
+        <div className='aa-InputWrapperPrefix'>
+          <label className='aa-Label' {...autocomplete.getLabelProps({})}>
+            <button className='aa-SubmitButton' type='submit' title='Submit'>
               <SearchIcon />
             </button>
           </label>
         </div>
-        <div className="aa-InputWrapper">
+        <div className='aa-InputWrapper'>
           <input
-            className="aa-Input"
+            className='aa-Input'
             ref={inputRef}
             {...autocomplete.getInputProps({ inputElement: inputRef.current })}
           />
         </div>
-        <div className="aa-InputWrapperSuffix">
-          <button className="aa-ClearButton" title="Clear" type="reset">
+        <div className='aa-InputWrapperSuffix'>
+          <button className='aa-ClearButton' title='Clear' type='reset'>
             <ClearIcon />
           </button>
         </div>
@@ -145,54 +145,54 @@ export function Autocomplete(
             .join(' ')}
           {...autocomplete.getPanelProps({})}
         >
-          <div className="aa-PanelLayout aa-Panel--scrollable">
+          <div className='aa-PanelLayout aa-Panel--scrollable'>
             {autocompleteState.collections.map((collection, index) => {
               const { source, items } = collection;
 
               return (
-                <section key={`source-${index}`} className="aa-Source">
+                <section key={`source-${index}`} className='aa-Source'>
                   {items.length > 0 && (
-                    <ul className="aa-List" {...autocomplete.getListProps()}>
-                      {items.map((item) => {
+                    <ul className='aa-List' {...autocomplete.getListProps()}>
+                      {items.map(item => {
                         return (
                           <li
                             key={item.objectID}
-                            className="aa-Item"
+                            className='aa-Item'
                             {...autocomplete.getItemProps({ item, source })}
                           >
-                            <div className="aa-ItemWrapper">
-                              <div className="aa-ItemContent">
-                                <div className="aa-ItemIcon aa-ItemIcon--picture aa-ItemIcon--alignTop">
+                            <div className='aa-ItemWrapper'>
+                              <div className='aa-ItemContent'>
+                                <div className='aa-ItemIcon aa-ItemIcon--picture aa-ItemIcon--alignTop'>
                                   <img
                                     src={item.image}
                                     alt={item.name}
-                                    width="40"
-                                    height="40"
+                                    width='40'
+                                    height='40'
                                   />
                                 </div>
-                                <div className="aa-ItemContentBody">
+                                <div className='aa-ItemContentBody'>
                                   <div
-                                    className="aa-ItemContentTitle"
+                                    className='aa-ItemContentTitle'
                                     dangerouslySetInnerHTML={{
-                                      __html: item._highlightResult!.name!
-                                        .value,
+                                      __html:
+                                        item._highlightResult!.name!.value,
                                     }}
                                   />
-                                  <div className="aa-ItemContentDescription">
+                                  <div className='aa-ItemContentDescription'>
                                     By <strong>{item.brand}</strong> in{' '}
                                     <strong>{item.categories[0]}</strong>
                                   </div>
                                 </div>
                               </div>
-                              <div className="aa-ItemActions">
+                              <div className='aa-ItemActions'>
                                 <button
-                                  className="aa-ItemActionButton aa-DesktopOnly aa-ActiveOnly"
-                                  type="button"
-                                  title="Select"
+                                  className='aa-ItemActionButton aa-DesktopOnly aa-ActiveOnly'
+                                  type='button'
+                                  title='Select'
                                   style={{ pointerEvents: 'none' }}
                                 >
-                                  <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M18.984 6.984h2.016v6h-15.188l3.609 3.609-1.406 1.406-6-6 6-6 1.406 1.406-3.609 3.609h13.172v-4.031z" />
+                                  <svg fill='currentColor' viewBox='0 0 24 24'>
+                                    <path d='M18.984 6.984h2.016v6h-15.188l3.609 3.609-1.406 1.406-6-6 6-6 1.406 1.406-3.609 3.609h13.172v-4.031z' />
                                   </svg>
                                 </button>
                               </div>
