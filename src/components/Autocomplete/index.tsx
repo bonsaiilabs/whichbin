@@ -3,27 +3,15 @@ import {
   AutocompleteState,
   createAutocomplete,
 } from '@algolia/autocomplete-core';
-import { getAlgoliaResults } from '@algolia/autocomplete-preset-algolia';
-import { Hit } from '@algolia/client-search';
-import algoliasearch from 'algoliasearch/lite';
 import React from 'react';
 
 import { ClearIcon } from './ClearIcon';
 import { SearchIcon } from './SearchIcon';
 
-const searchClient = algoliasearch(
-  'latency',
-  '6be0576ff61c053d5f9a3225e2a90f76'
-);
-
-type AutocompleteItem = Hit<{
-  brand: string;
-  categories: string[];
-  image: string;
-  name: string;
-  objectID: string;
+type AutocompleteItem = {
+  label: string;
   url: string;
-}>;
+};
 
 export function Autocomplete(
   props: Partial<AutocompleteOptions<AutocompleteItem>>
@@ -53,22 +41,14 @@ export function Autocomplete(
         getSources() {
           return [
             {
-              sourceId: 'products',
+              sourceId: 'links',
               getItems({ query }) {
-                return getAlgoliaResults({
-                  searchClient,
-                  queries: [
-                    {
-                      indexName: 'instant_search',
-                      query,
-                      params: {
-                        hitsPerPage: 5,
-                        highlightPreTag: '<mark>',
-                        highlightPostTag: '</mark>',
-                      },
-                    },
-                  ],
-                });
+                return [
+                  { label: 'Twitter', url: 'https://twitter.com' },
+                  { label: 'GitHub', url: 'https://github.com' },
+                ].filter(({ label }) =>
+                  label.toLowerCase().includes(query.toLowerCase())
+                );
               },
               getItemUrl({ item }) {
                 return item.url;
@@ -147,7 +127,6 @@ export function Autocomplete(
         >
           <div className='aa-PanelLayout aa-Panel--scrollable'>
             {autocompleteState.collections.map((collection, index) => {
-              console.log({collection})
               const { source, items } = collection;
 
               return (
@@ -157,32 +136,19 @@ export function Autocomplete(
                       {items.map(item => {
                         return (
                           <li
-                            key={item.objectID}
+                            key={item.url}
                             className='aa-Item'
                             {...autocomplete.getItemProps({ item, source })}
                           >
                             <div className='aa-ItemWrapper'>
                               <div className='aa-ItemContent'>
-                                <div className='aa-ItemIcon aa-ItemIcon--picture aa-ItemIcon--alignTop'>
-                                  <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    width='40'
-                                    height='40'
-                                  />
-                                </div>
                                 <div className='aa-ItemContentBody'>
                                   <div
                                     className='aa-ItemContentTitle'
                                     dangerouslySetInnerHTML={{
-                                      __html:
-                                        item._highlightResult!.name!.value,
+                                      __html: item.label,
                                     }}
                                   />
-                                  <div className='aa-ItemContentDescription'>
-                                    By <strong>{item.brand}</strong> in{' '}
-                                    <strong>{item.categories[0]}</strong>
-                                  </div>
                                 </div>
                               </div>
                               <div className='aa-ItemActions'>
