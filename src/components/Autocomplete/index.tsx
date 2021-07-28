@@ -9,6 +9,7 @@ import { ClearIcon } from './ClearIcon';
 import { SearchIcon } from './SearchIcon';
 import { itemToBins } from '../../data/bins';
 import { ItemToBin } from '../../types/itemToBin';
+import { useHistory } from 'react-router-dom';
 
 type AutocompleteItem = ItemToBin;
 
@@ -60,6 +61,10 @@ export function Autocomplete(
   const formRef = React.useRef<HTMLFormElement>(null);
   const panelRef = React.useRef<HTMLDivElement>(null);
   const { getEnvironmentProps } = autocomplete;
+  const history = useHistory();
+  const onResultClick = (item: ItemToBin) => {
+    history.push(`/${item.id}`);
+  };
 
   React.useEffect(() => {
     if (!formRef.current || !panelRef.current || !inputRef.current) {
@@ -135,6 +140,7 @@ export function Autocomplete(
                             key={item.item}
                             className='aa-Item'
                             {...autocomplete.getItemProps({ item, source })}
+                            onClick={() => onResultClick(item)}
                           >
                             <div className='aa-ItemWrapper'>
                               <div className='aa-ItemContent'>
