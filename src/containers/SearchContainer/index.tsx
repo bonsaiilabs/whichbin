@@ -6,15 +6,20 @@ import { itemToBins } from '../../data/bins';
 import { ItemToBin } from '../../types/itemToBin';
 
 function SearchContainer() {
-  const [idsToBin, setIdsToBin] = useState<Map<number, ItemToBin> | undefined>(undefined)
+  const [idsToBin, setIdsToBin] = useState<Map<number, ItemToBin> | undefined>(
+    undefined
+  );
 
   useEffect(() => {
-    const itemIdsToBin = itemToBins.reduce(((acc: Map<number, ItemToBin>, item) => {
-      acc.set(item.id, item);
-      return acc;
-    }), new Map<number, ItemToBin>());
-    console.log(itemIdsToBin)
-    setIdsToBin(itemIdsToBin)
+    const itemIdsToBin = itemToBins.reduce(
+      (acc: Map<number, ItemToBin>, item) => {
+        acc.set(item.id, item);
+        return acc;
+      },
+      new Map<number, ItemToBin>()
+    );
+    console.log(itemIdsToBin);
+    setIdsToBin(itemIdsToBin);
   }, []);
 
   return (
