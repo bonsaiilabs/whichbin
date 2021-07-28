@@ -7,11 +7,10 @@ import React from 'react';
 
 import { ClearIcon } from './ClearIcon';
 import { SearchIcon } from './SearchIcon';
+import { itemToBins } from '../../data/bins';
+import { ItemToBin } from '../../types/itemToBin';
 
-type AutocompleteItem = {
-  label: string;
-  url: string;
-};
+type AutocompleteItem = ItemToBin;
 
 export function Autocomplete(
   props: Partial<AutocompleteOptions<AutocompleteItem>>
@@ -43,15 +42,12 @@ export function Autocomplete(
             {
               sourceId: 'links',
               getItems({ query }) {
-                return [
-                  { label: 'Twitter', url: 'https://twitter.com' },
-                  { label: 'GitHub', url: 'https://github.com' },
-                ].filter(({ label }) =>
-                  label.toLowerCase().includes(query.toLowerCase())
+                return itemToBins.filter(({ item }) =>
+                  item.toLowerCase().includes(query.toLowerCase())
                 );
               },
               getItemUrl({ item }) {
-                return item.url;
+                return item.id as unknown as string; // todo: make ids as string
               },
             },
           ];
@@ -136,7 +132,7 @@ export function Autocomplete(
                       {items.map(item => {
                         return (
                           <li
-                            key={item.url}
+                            key={item.item}
                             className='aa-Item'
                             {...autocomplete.getItemProps({ item, source })}
                           >
@@ -146,7 +142,7 @@ export function Autocomplete(
                                   <div
                                     className='aa-ItemContentTitle'
                                     dangerouslySetInnerHTML={{
-                                      __html: item.label,
+                                      __html: item.item,
                                     }}
                                   />
                                 </div>
