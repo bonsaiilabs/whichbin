@@ -18,7 +18,6 @@ function SearchContainer() {
       },
       new Map<number, ItemToBin>()
     );
-    console.log(itemIdsToBin);
     setIdsToBin(itemIdsToBin);
   }, []);
 
