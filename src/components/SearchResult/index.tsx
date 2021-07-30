@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ItemToBin } from '../../types/itemToBin';
 import { useGetBinMappings } from '../../helpers/mappings';
 import { useParams } from 'react-router-dom';
-
+//TODO: This should be memoised and should only run once when the app loads
 export const SearchResult = () => {
   const { id } = useParams<{ id: string }>();
   const [item, setItem] = useState<ItemToBin | undefined>(undefined);
