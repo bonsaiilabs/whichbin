@@ -5,7 +5,7 @@ import {
   useGetLocationMappings,
 } from '../../helpers/mappings';
 import { useParams } from 'react-router-dom';
-
+//TODO: This should be memoized and should only run once when the app loads
 export const SearchResult = () => {
   const { id } = useParams<{ id: string }>();
   const [item, setItem] = useState<ItemToBin | undefined>(undefined);
