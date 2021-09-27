@@ -32,6 +32,30 @@ export const itemToBins: ItemToBin[] = [
     id: 5,
   },
   {
+    item: 'Batteries',
+    bin: 'Cannot throw in community',
+    notes: 'Call2Recycle Nanaimo will accept for recycling',
+    id: 7,
+  },
+  {
+    item: 'Bedding & blankets',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 8,
+  },
+  {
+    item: 'Beds',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 9,
+  },
+  {
+    item: 'Bicycles',
+    bin: 'Landfill',
+    notes: 'Thrift stores, metal recycling (regional), or the landfill',
+    id: 10,
+  },
+  {
     item: 'Birthday cards',
     bin: 'Recycle',
     notes: '',
@@ -42,6 +66,18 @@ export const itemToBins: ItemToBin[] = [
     bin: 'Recycle',
     notes: '',
     id: 14,
+  },
+  {
+    item: 'Bottles & jars',
+    bin: 'Cannot throw in community',
+    notes: 'Regional recycling 2375 Hayes Road, Nanaimo 250-751-2358',
+    id: 15,
+  },
+  {
+    item: 'Bras',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 16,
   },
   {
     item: 'Bubble wrap',
@@ -62,16 +98,34 @@ export const itemToBins: ItemToBin[] = [
     id: 21,
   },
   {
+    item: 'Car batteries',
+    bin: 'Cannot throw in community',
+    notes: 'http://www.env.gov.bc.ca/epd/recycling/batt/index.htm',
+    id: 22,
+  },
+  {
     item: 'Non-Waxed Cardboard',
     bin: 'Recycle',
     notes: '',
     id: 23,
   },
   {
+    item: 'Carpets',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 24,
+  },
+  {
     item: 'Cartons',
     bin: 'Recycle',
     notes: '',
     id: 27,
+  },
+  {
+    item: 'Cassette players',
+    bin: 'Cannot throw in community',
+    notes: 'Encorp Return-It Electronics',
+    id: 28,
   },
   {
     item: 'Cat litter',
@@ -86,6 +140,36 @@ export const itemToBins: ItemToBin[] = [
     id: 30,
   },
   {
+    item: 'CD & DVD players',
+    bin: 'Cannot throw in community',
+    notes: 'Encorp Return-It Electronics',
+    id: 31,
+  },
+  {
+    item: 'CDs & DVDs',
+    bin: 'Cannot throw in community',
+    notes: 'Encorp Return-It Electronics',
+    id: 32,
+  },
+  {
+    item: 'Chairs',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 33,
+  },
+  {
+    item: 'Chest freezers',
+    bin: 'Cannot throw in community',
+    notes: 'Major Appliance Recycling Roundtable',
+    id: 35,
+  },
+  {
+    item: 'Chest of drawers',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 36,
+  },
+  {
     item: 'Christmas cards',
     bin: 'Recycle',
     notes: '',
@@ -96,6 +180,18 @@ export const itemToBins: ItemToBin[] = [
     bin: 'Landfill',
     notes: '',
     id: 38,
+  },
+  {
+    item: 'Christmas tree lights',
+    bin: 'Cannot throw in community',
+    notes: 'Residential Lighting Fixtures - LightRecycle',
+    id: 39,
+  },
+  {
+    item: 'Christmas trees',
+    bin: 'Cannot throw in community',
+    notes: 'Seasonal chipping programs usually are run in January',
+    id: 40,
   },
   {
     item: 'Cling film',
@@ -116,6 +212,36 @@ export const itemToBins: ItemToBin[] = [
     id: 43,
   },
   {
+    item: 'Clothes',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 44,
+  },
+  {
+    item: 'Clothes hangers',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 45,
+  },
+  {
+    item: 'Clothing & textiles',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 46,
+  },
+  {
+    item: 'Computer monitors',
+    bin: 'Cannot throw in community',
+    notes: 'https://www.return-it.ca/electronics/',
+    id: 50,
+  },
+  {
+    item: 'Computers',
+    bin: 'Cannot throw in community',
+    notes: 'https://www.return-it.ca/electronics/',
+    id: 51,
+  },
+  {
     item: 'Corks',
     bin: 'Landfill',
     notes: '',
@@ -134,6 +260,49 @@ export const itemToBins: ItemToBin[] = [
     id: 56,
   },
   {
+    item: 'Crockery & cutlery',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 58,
+  },
+  {
+    item: 'Cupboards',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 59,
+  },
+  {
+    item: 'Curtains',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 60,
+  },
+  {
+    item: 'Cushions',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 61,
+  },
+  {
+    item: 'Cutlery',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 62,
+  },
+  {
+    item: 'Diesel & petrol',
+    bin: 'Cannot throw in community',
+    notes:
+      'https://api.recollect.net/w/areas/NanaimoRDN/services/274/pages/263611?pservice=274',
+    id: 63,
+  },
+  {
+    item: 'Dishwashers',
+    bin: 'Cannot throw in community',
+    notes: 'http://marrbc.ca/',
+    id: 64,
+  },
+  {
     item: 'Disposable cutlery',
     bin: 'Landfill',
     notes: '',
@@ -144,6 +313,12 @@ export const itemToBins: ItemToBin[] = [
     bin: 'Landfill',
     notes: '',
     id: 66,
+  },
+  {
+    item: 'Doors',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 69,
   },
   {
     item: 'Drink cartons',
@@ -158,16 +333,58 @@ export const itemToBins: ItemToBin[] = [
     id: 71,
   },
   {
+    item: 'Duvets & pillows',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 72,
+  },
+  {
+    item: 'DVD & CD players',
+    bin: 'Cannot throw in community',
+    notes: 'Encorp Return-It Electronics',
+    id: 73,
+  },
+  {
+    item: 'DVDs and CDs',
+    bin: 'Cannot throw in community',
+    notes: 'Encorp Return-It Electronics',
+    id: 74,
+  },
+  {
     item: 'Egg shells',
     bin: 'Organic Waste',
     notes: '',
     id: 75,
   },
   {
+    item: 'Electrical items',
+    bin: 'Cannot throw in community',
+    notes: 'Encorp Return-It Electronics',
+    id: 76,
+  },
+  {
+    item: 'Electronic games',
+    bin: 'Cannot throw in community',
+    notes: 'Encorp Return-It Electronics',
+    id: 77,
+  },
+  {
+    item: 'Engine oil',
+    bin: 'Cannot throw in community',
+    notes: 'http://bcusedoil.com/recycling-centres/',
+    id: 79,
+  },
+  {
     item: 'Envelopes',
     bin: 'Recycle',
     notes: '',
     id: 80,
+  },
+  {
+    item: 'Fabric',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 81,
   },
   {
     item: 'Face coverings (masks) and PPE',
@@ -194,6 +411,12 @@ export const itemToBins: ItemToBin[] = [
     id: 89,
   },
   {
+    item: 'Food blender / mixer',
+    bin: 'Cannot throw in community',
+    notes: 'http://electrorecycle.ca/',
+    id: 90,
+  },
+  {
     item: 'Food tins & drink cans',
     bin: 'Recycle',
     notes: '',
@@ -206,10 +429,34 @@ export const itemToBins: ItemToBin[] = [
     id: 92,
   },
   {
+    item: 'Fridges & freezers',
+    bin: 'Cannot throw in community',
+    notes: 'http://electrorecycle.ca/',
+    id: 93,
+  },
+  {
+    item: 'Furniture',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 94,
+  },
+  {
+    item: 'Games & toys',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 95,
+  },
+  {
     item: 'Garden waste',
     bin: 'Organic Waste',
     notes: '',
     id: 97,
+  },
+  {
+    item: 'Gardening tools',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 98,
   },
   {
     item: 'Gift & toy packaging',
@@ -224,6 +471,12 @@ export const itemToBins: ItemToBin[] = [
     id: 101,
   },
   {
+    item: 'Glass bottles & jars',
+    bin: 'Cannot throw in community',
+    notes: 'Regional Recycling Nanaimo - must drop off',
+    id: 102,
+  },
+  {
     item: 'Glasses',
     bin: 'Landfill',
     notes: '',
@@ -234,6 +487,30 @@ export const itemToBins: ItemToBin[] = [
     bin: 'Recycle',
     notes: '',
     id: 104,
+  },
+  {
+    item: 'Hair dryers',
+    bin: 'Cannot throw in community',
+    notes: 'http://electrorecycle.ca/',
+    id: 105,
+  },
+  {
+    item: 'Hair straighteners',
+    bin: 'Cannot throw in community',
+    notes: 'http://electrorecycle.ca/',
+    id: 106,
+  },
+  {
+    item: 'Hearing aid',
+    bin: 'Cannot throw in community',
+    notes: 'https://www.return-it.ca/electronics/',
+    id: 109,
+  },
+  {
+    item: 'Hedge trimmers',
+    bin: 'Cannot throw in community',
+    notes: 'http://www.opeic.ca/',
+    id: 110,
   },
   {
     item: 'Irons',
@@ -248,16 +525,40 @@ export const itemToBins: ItemToBin[] = [
     id: 115,
   },
   {
+    item: 'Jewellery',
+    bin: 'Landfill',
+    notes: 'Thrift stores or the landfill',
+    id: 116,
+  },
+  {
     item: 'Junk mail',
     bin: 'Recycle',
     notes: '',
     id: 117,
   },
   {
+    item: 'Kettles',
+    bin: 'Cannot throw in community',
+    notes: 'http://electrorecycle.ca/',
+    id: 118,
+  },
+  {
     item: 'Magazines',
     bin: 'Recycle',
     notes: '',
     id: 128,
+  },
+  {
+    item: 'Mattresses',
+    bin: 'Cannot throw in community',
+    notes: 'Landfill drop-off',
+    id: 129,
+  },
+  {
+    item: 'Medicines',
+    bin: 'Cannot throw in community',
+    notes: 'Pharmacy may accept - https://www.rcbc.ca/education/faqs/hazard7',
+    id: 130,
   },
   {
     item: 'Milk bottles',

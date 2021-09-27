@@ -4,3 +4,11 @@ export type ItemToBin = {
   bin: string;
   notes: string;
 };
+
+export type Location = {
+  key: string;
+  display: string;
+  phone: string;
+  website: string;
+  directions?: string;
+};

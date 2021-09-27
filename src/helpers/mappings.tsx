@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { ItemToBin } from '../types/itemToBin';
+import { ItemToBin, Location } from '../types/itemToBin';
 import { itemToBins } from '../data/bins';
+import { LOCATIONS } from '../data/locations';
 
 export const useGetBinMappings = () => {
   const [mappings, setMappings] = useState<Map<number, ItemToBin> | undefined>(
@@ -18,4 +19,22 @@ export const useGetBinMappings = () => {
     setMappings(itemIdsToBin);
   }, []);
   return mappings;
+};
+
+export const useGetLocationMappings = () => {
+  const [locations, setLocations] = useState<
+    Map<string, Location> | undefined
+  >();
+
+  useEffect(() => {
+    const keyTolocations = LOCATIONS.reduce(
+      (acc: Map<string, Location>, location) => {
+        acc.set(location.key, location);
+        return acc;
+      },
+      new Map<string, Location>()
+    );
+    setLocations(keyTolocations);
+  }, []);
+  return locations;
 };
