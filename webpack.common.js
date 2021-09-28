@@ -16,7 +16,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/manifest.json', to: './' },
-        { from: 'src/icons/manifest', to: './' },
+        { from: 'src/assets/manifest', to: './' },
       ],
     }),
     new InjectManifest({
