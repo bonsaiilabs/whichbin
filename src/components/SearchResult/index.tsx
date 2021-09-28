@@ -6,6 +6,27 @@ import {
 } from '../../helpers/mappings';
 import { useParams } from 'react-router-dom';
 import { AppShell } from '../AppShell';
+import Returnable from '../../assets/bins/returnables.jpeg';
+import Landfill from '../../assets/bins/landfill.jpeg';
+import NoBin from '../../assets/bins/noBin.jpeg';
+import Organic from '../../assets/bins/organic.jpeg';
+import Recycle from '../../assets/bins/recycle.jpeg';
+import styles from './searchresult.module.css';
+
+const getBinToImage = (note: string) => {
+  switch (note) {
+    case 'Recycle':
+      return Recycle;
+    case 'Landfill':
+      return Landfill;
+    case 'Recycle-Returnables':
+      return Returnable;
+    case 'Organic Waste':
+      return Organic;
+    case 'Cannot throw in community':
+      return NoBin;
+  }
+};
 
 export const SearchResult = () => {
   const { id } = useParams<{ id: string }>();
@@ -31,8 +52,21 @@ export const SearchResult = () => {
   }
   return (
     <AppShell>
-      <pre>{JSON.stringify(item, null, 2)}</pre>
-      {location && <pre>{JSON.stringify(location, null, 2)}</pre>}
+      <div className={styles.resultsContainer}>
+        <h2>{item.item}</h2>
+        <img
+          src={getBinToImage(item.bin)}
+          height={300} // should change
+          width={'auto'}
+          alt={item.notes}
+        />
+        {item.bin !== 'Cannot throw in community' && (
+          <h3>Your Bin: {item.bin}</h3>
+        )}
+        {item.bin === 'Cannot throw in community' && <h3>{item.bin}</h3>}
+        {/*<pre>{JSON.stringify(item, null, 2)}</pre>
+        {location && <pre>{JSON.stringify(location, null, 2)}</pre>}*/}
+      </div>
     </AppShell>
   );
 };
