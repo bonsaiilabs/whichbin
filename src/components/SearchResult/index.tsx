@@ -5,7 +5,8 @@ import {
   useGetLocationMappings,
 } from '../../helpers/mappings';
 import { useParams } from 'react-router-dom';
-//TODO: This should be memoized and should only run once when the app loads
+import { AppShell } from '../AppShell';
+
 export const SearchResult = () => {
   const { id } = useParams<{ id: string }>();
   const [item, setItem] = useState<ItemToBin | undefined>(undefined);
@@ -16,25 +17,22 @@ export const SearchResult = () => {
   useEffect(() => {
     if (!mappings) return;
     setItem(mappings.get(Number(id)));
-  }, [mappings]);
+  }, [mappings, id]);
 
   useEffect(() => {
     if (!(locations && item)) return;
-    console.log(`setting up item location`);
     const mappedItem = mappings.get(Number(id)) as ItemToBin;
     let aLocation: Location = locations.get(mappedItem.notes);
-    if (aLocation) {
-      setLocation(aLocation);
-    }
-  }, [locations, item]);
+    setLocation(aLocation);
+  }, [locations, item, id]);
 
   if (!item) {
     return <h1>Loading...</h1>;
   }
   return (
-    <>
+    <AppShell>
       <pre>{JSON.stringify(item, null, 2)}</pre>
       {location && <pre>{JSON.stringify(location, null, 2)}</pre>}
-    </>
+    </AppShell>
   );
 };
