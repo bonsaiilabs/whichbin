@@ -8,7 +8,7 @@ import React from 'react';
 import { ClearIcon } from './ClearIcon';
 import { SearchIcon } from './SearchIcon';
 import { itemToBins } from '../../data/bins';
-import { ItemToBin } from '../../types/itemToBin';
+import { ItemToBin } from '../../types/shared';
 import { useHistory } from 'react-router-dom';
 
 type AutocompleteItem = ItemToBin;

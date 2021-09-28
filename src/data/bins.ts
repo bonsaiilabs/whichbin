@@ -1,4 +1,4 @@
-import { ItemToBin } from '../types/itemToBin';
+import { ItemToBin } from '../types/shared';
 
 export const itemToBins: ItemToBin[] = [
   {

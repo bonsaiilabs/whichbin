@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ItemToBin, Location } from '../../types/itemToBin';
+import { ItemToBin, Location } from '../../types/shared';
 import {
   useGetBinMappings,
   useGetLocationMappings,
