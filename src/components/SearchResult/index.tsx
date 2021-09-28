@@ -13,6 +13,7 @@ import Organic from '../../assets/bins/organic.jpeg';
 import Recycle from '../../assets/bins/recycle.jpeg';
 import styles from './searchresult.module.css';
 import { BinInformation } from './BinInformation';
+import { AdditionalInfo } from '../AdditionalInfo';
 
 const getBinToImage = (note: string) => {
   switch (note) {
@@ -60,6 +61,7 @@ export const SearchResult = () => {
           image={getBinToImage(item.bin)}
           notes={item.notes}
         />
+        <AdditionalInfo />
       </div>
     </AppShell>
   );

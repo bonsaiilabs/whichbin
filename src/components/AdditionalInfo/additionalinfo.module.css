@@ -1,0 +1,10 @@
+.additionalInfoContainer {
+    background-color: #F3F4F6;
+    padding-top: 10px;
+}
+.additionalInfoIcons {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F3F4F6;
+    padding-top: 20px;
+}
