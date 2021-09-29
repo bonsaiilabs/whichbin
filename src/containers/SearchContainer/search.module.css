@@ -1,14 +1,14 @@
 .logo {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search {
-    margin: 10px auto;
-    max-width: 90%;
-    width: 80%;
+  margin: 10px auto;
+  max-width: 90%;
+  width: 80%;
 }
