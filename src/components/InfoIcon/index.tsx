@@ -6,13 +6,15 @@ import styles from './infoicon.module.css';
 
 interface InfoIconProps {
   name: string;
+  url: string;
 }
 
-export const InfoIcon = ({ name }: InfoIconProps) => {
-  const getImage =
-    name === 'Website' ? Website : name === 'Phone' ? Phone : Directions;
+export const InfoIcon = ({ name, url }: InfoIconProps) => {
   return (
-    <div className={styles.iconContainer}>
+    <div
+      className={styles.iconContainer}
+      onClick={() => window.open(url, '_blank')}
+    >
       {name === 'Website' && <Website />}
       {name === 'Phone' && <Phone />}
       {name === 'Directions' && <Directions />}

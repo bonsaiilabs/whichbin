@@ -61,7 +61,7 @@ export const SearchResult = () => {
           image={getBinToImage(item.bin)}
           notes={item.notes}
         />
-        <AdditionalInfo />
+        {item.notes.trim().length > 0 && <AdditionalInfo note={item.notes} />}
       </div>
     </AppShell>
   );
