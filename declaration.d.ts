@@ -9,3 +9,8 @@ declare module '*.png' {
   const content: string;
   export default content;
 }
+declare module '*.jpeg' {
+  //import { ReactElement, SVGProps } from 'react';
+  const content: string;
+  export default content;
+}

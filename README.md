@@ -48,4 +48,4 @@ For other provides, I encourage folks to update this documentation by opening up
 reference to the official documentation.
 
 ---
-[![Powered by Vercel](./src/icons/powered-by-vercel.svg)](https://vercel.com/?utm_source=bonsaiilabs&utm_campaign=oss)
+[![Powered by Vercel](src/assets/powered-by-vercel.svg)](https://vercel.com/?utm_source=bonsaiilabs&utm_campaign=oss)

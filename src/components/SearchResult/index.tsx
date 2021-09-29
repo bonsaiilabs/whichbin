@@ -1,11 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { ItemToBin, Location } from '../../types/itemToBin';
+import { ItemToBin, Location } from '../../types/shared';
 import {
   useGetBinMappings,
   useGetLocationMappings,
 } from '../../helpers/mappings';
 import { useParams } from 'react-router-dom';
 import { AppShell } from '../AppShell';
+import Returnable from '../../assets/bins/returnables.jpeg';
+import Landfill from '../../assets/bins/landfill.jpeg';
+import NoBin from '../../assets/bins/stop.jpeg';
+import Organic from '../../assets/bins/organic.jpeg';
+import Recycle from '../../assets/bins/recycle.jpeg';
+import styles from './searchresult.module.css';
+import { BinInformation } from './BinInformation';
+import { AdditionalInfo } from '../AdditionalInfo';
+
+const getBinToImage = (note: string) => {
+  switch (note) {
+    case 'Recycle':
+      return Recycle;
+    case 'Landfill':
+      return Landfill;
+    case 'Recycle-Returnables':
+      return Returnable;
+    case 'Organic Waste':
+      return Organic;
+    case 'Cannot throw in community':
+      return NoBin;
+  }
+};
 
 export const SearchResult = () => {
   const { id } = useParams<{ id: string }>();
@@ -31,8 +54,15 @@ export const SearchResult = () => {
   }
   return (
     <AppShell>
-      <pre>{JSON.stringify(item, null, 2)}</pre>
-      {location && <pre>{JSON.stringify(location, null, 2)}</pre>}
+      <div className={styles.resultsContainer}>
+        <BinInformation
+          name={item.item}
+          bin={item.bin}
+          image={getBinToImage(item.bin)}
+          notes={item.notes}
+        />
+        {item.notes.trim().length > 0 && <AdditionalInfo note={item.notes} />}
+      </div>
     </AppShell>
   );
 };
