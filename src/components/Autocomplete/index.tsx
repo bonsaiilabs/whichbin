@@ -64,6 +64,7 @@ export function Autocomplete(
   const history = useHistory();
   const onResultClick = (item: ItemToBin) => {
     history.push(`/${item.id}`);
+    inputRef.current.blur();
     panelRef.current.hidden = true;
   };
 
