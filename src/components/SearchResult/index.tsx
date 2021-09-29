@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import { AppShell } from '../AppShell';
 import Returnable from '../../assets/bins/returnables.jpeg';
 import Landfill from '../../assets/bins/landfill.jpeg';
-import NoBin from '../../assets/bins/noBin.jpeg';
+import NoBin from '../../assets/bins/stop.jpeg';
 import Organic from '../../assets/bins/organic.jpeg';
 import Recycle from '../../assets/bins/recycle.jpeg';
 import styles from './searchresult.module.css';

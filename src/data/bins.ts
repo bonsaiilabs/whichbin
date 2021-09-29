@@ -100,7 +100,9 @@ export const itemToBins: ItemToBin[] = [
   {
     item: 'Car batteries',
     bin: 'Cannot throw in community',
-    notes: 'http://www.env.gov.bc.ca/epd/recycling/batt/index.htm',
+    // change
+    //notes: 'http://www.env.gov.bc.ca/epd/recycling/batt/index.htm',
+    notes: '',
     id: 22,
   },
   {
@@ -190,7 +192,9 @@ export const itemToBins: ItemToBin[] = [
   {
     item: 'Christmas trees',
     bin: 'Cannot throw in community',
-    notes: 'Seasonal chipping programs usually are run in January',
+    // change
+    // notes: 'Seasonal chipping programs usually are run in January',
+    notes: '',
     id: 40,
   },
   {
@@ -292,8 +296,9 @@ export const itemToBins: ItemToBin[] = [
   {
     item: 'Diesel & petrol',
     bin: 'Cannot throw in community',
-    notes:
-      'https://api.recollect.net/w/areas/NanaimoRDN/services/274/pages/263611?pservice=274',
+    // change
+    // notes: 'https://api.recollect.net/w/areas/NanaimoRDN/services/274/pages/263611?pservice=274',
+    notes: '',
     id: 63,
   },
   {
