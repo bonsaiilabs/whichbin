@@ -1,7 +1,14 @@
 .additionalInfoContainer {
   background-color: #f3f4f6;
   padding-top: 10px;
+  width: 99%;
 }
+
+.additionalInfoContainer p {
+  max-width: 95%;
+  text-align: center;
+}
+
 .additionalInfoIcons {
   display: flex;
   justify-content: space-around;

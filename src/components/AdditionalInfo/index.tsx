@@ -6,11 +6,16 @@ import { CONTACTS } from '../../data/contact';
 interface AdditionalInfoProps {
   note: string;
 }
+
 export const AdditionalInfo = ({ note }: AdditionalInfoProps) => {
   const contactInfo = CONTACTS.filter(c => c.key === note)[0];
+  const displayText =
+    contactInfo.key === 'Thrift stores or the landfill'
+      ? 'You may also drop it at nearby Thrift store'
+      : `You must drop this item at ${contactInfo.display}`;
   return (
     <div className={styles.additionalInfoContainer}>
-      <p>This item can also be donated to nearby Thrift store.</p>
+      <p>{displayText}</p>
       <div className={styles.additionalInfoIcons}>
         <InfoIcon name={'Website'} url={contactInfo.website} />
         <InfoIcon name={'Phone'} url={`tel:${contactInfo.phone}`} />
