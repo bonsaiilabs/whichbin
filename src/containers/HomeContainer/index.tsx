@@ -10,7 +10,7 @@ export const HomeContainer = () => {
         <WhichBinLogo />
         <h1>Which Bin?</h1>
       </div>
-      <p>Find which bin your trash belongs to</p>
+      <p>Find where you should throw your trash</p>
       <div className={styles.homeSearchContainer}>
         <SearchContainer />
       </div>
