@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchContainer from '../../containers/SearchContainer';
+import { Header } from '../Header';
 
 export type AppShellProps = {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ export const AppShell = ({ children }: AppShellProps) => {
 
   return (
     <>
-      <SearchContainer />
+      <Header />
       {children}
     </>
   );

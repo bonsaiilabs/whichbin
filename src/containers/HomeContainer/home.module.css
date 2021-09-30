@@ -1,0 +1,29 @@
+.homeContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.homeContainer > div:first-child {
+  grid-row-start: 3;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title > h1 {
+  padding-left: 16px;
+}
+
+.homeContainer p {
+  grid-row-start: 4;
+  text-align: center;
+}
+
+.homeSearchContainer {
+  grid-row-start: 5;
+}
