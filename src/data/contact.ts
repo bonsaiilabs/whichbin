@@ -59,7 +59,7 @@ export const CONTACTS: ContactInfo[] = [
       'https://www.google.com/maps/dir/6540+Metral+Drive,+Nanaimo,+BC,+Canada/750c+Jackson+Rd,+Nanaimo,+BC+V9X+1J2,+Canada/@49.1412169,-123.879569,16.06z/data=!3m1!5s0x5488a21976d4e5e7:0xf3b072177e281d21!4m13!4m12!1m5!1m1!1s0x548898c858e3a22f:0xdd777ad4394d1eb5!2m2!1d-124.0473916!2d49.232705!1m5!1m1!1s0x5488a6942a9621dd:0x6b2892c8f3386486!2m2!1d-123.8797837!2d49.1453399',
   },
   {
-    key: 'http://marrbc.ca/',
+    key: 'https://marrbc.ca/',
     display: 'ABC Recycling Ltd. - Nanaimo',
     phone: '250-722-0303',
     website: 'https://www.marrbc.ca/collection-site-locator?St=#findsites',
