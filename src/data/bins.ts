@@ -304,7 +304,7 @@ export const itemToBins: ItemToBin[] = [
   {
     item: 'Dishwashers',
     bin: 'Cannot throw in community',
-    notes: 'http://marrbc.ca/',
+    notes: 'https://marrbc.ca/',
     id: 64,
   },
   {
@@ -514,7 +514,7 @@ export const itemToBins: ItemToBin[] = [
   {
     item: 'Hedge trimmers',
     bin: 'Cannot throw in community',
-    notes: 'http://www.opeic.ca/',
+    notes: 'https://www.opeic.ca/',
     id: 110,
   },
   {
