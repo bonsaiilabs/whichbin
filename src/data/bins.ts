@@ -376,7 +376,7 @@ export const itemToBins: ItemToBin[] = [
   {
     item: 'Engine oil',
     bin: 'Cannot throw in community',
-    notes: 'http://bcusedoil.com/recycling-centres/',
+    notes: 'https://bcusedoil.com/recycling-centres/',
     id: 79,
   },
   {
